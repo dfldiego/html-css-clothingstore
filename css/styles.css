@@ -169,3 +169,18 @@ h4 {
 .col-4:hover {
     transform: translateY(-7px);
 }
+
+/*****IMAGEN DE FONDO******/
+.offer {
+    background: radial-gradient(#ffffff, #faadbd);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+.col-2 .offer-img {
+    padding: 50px;
+}
+
+small {
+    color: #555555;
+}
