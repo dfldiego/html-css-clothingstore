@@ -8,6 +8,27 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555555;
+}
+
+/*subrayado en titulo*/
+.title::after {
+    content: '';
+    background: #faadbd;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 /**********NAVBAR******/
 
 .navbar {
@@ -115,4 +136,36 @@ p {
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+}
+
+/******PRODUCTOS DESTACADOS******/
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+h4 {
+    color: #555555;
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 14px;
+}
+
+.rating .fas,
+.rating .far {
+    color: #faadbd;
+}
+
+/*sube la imagen al posar el puntero en la imagen*/
+.col-4:hover {
+    transform: translateY(-7px);
 }
