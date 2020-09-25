@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>DiegoLongo | E-commerce Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="products.html">Productos</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Cuenta</a></li>
+                </ul>
+            </nav>
+            <img src="images/bolso.svg" alt="bolso" width="30px" height="30px">
+            <img src="images/menu.png" alt="barra" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/camaraPrincipalTrasparente2.png" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Iniciar Sesión</span>
+                            <span onclick="register()">Crear Cuenta</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Usuario">
+                            <input type="password" placeholder="Contraseña">
+                            <button type="submit" class="btn">Iniciar Sesión</button>
+                            <a href="#">Olvidé mi contraseña</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Usuario">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Contraseña">
+                            <button type="submit" class="btn">Crear Usuario</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Descarga nuestra App</h3>
+                    <p>Descarga nuestra App por Android y por dispositivos móviles ios.</p>
+                    <div class="app-logo">
+                        <img src="/images/google-play.png" alt="">
+                        <img src="images/apple-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo.png" alt="logo">
+                    <p>Nuestro propósito es dar los productos mejores calificados al cliente, traerlos de vuelta y
+                        hacerlos felices. </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li>Cupones</li>
+                        <li>Blog</li>
+                        <li>Retornar a la policia</li>
+                        <li>Unirse a la afiliación</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Síguenos</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright &copy; 2020 - www.maxstore.com</p>
+        </div>
+    </div>
+
+
+    <script>
+        let MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+
+</body>
+
+</html>
