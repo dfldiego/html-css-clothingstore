@@ -451,17 +451,19 @@ input:focus {
 }
 
 /*****DETALLE PRODUCTOS - RESPONSIVE***/
-.single-product .row {
-    text-align: left;
-}
+@media (max-width: 600px) {
+    .single-product .row {
+        text-align: left;
+    }
 
-.single-product .col-2 {
-    padding: 20px 0;
-}
+    .single-product .col-2 {
+        padding: 20px 0;
+    }
 
-.single-product h1 {
-    font-size: 26px;
-    line-height: 32px;
+    .single-product h1 {
+        font-size: 26px;
+        line-height: 32px;
+    }
 }
 
 /******* CARRITO ******/
@@ -525,4 +527,11 @@ td:last-child {
 
 th:last-child {
     text-align: right;
+}
+
+/*****CARRITO - RESPONSIVE***/
+@media (max-width:600px) {
+    .cart-info p {
+        display: none;
+    }
 }
